@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📘 Smart Study Planner</h1>
+    <p>Plan your study day efficiently and stay motivated!</p>
+
+    <label>Total Study Hours:</label>
+    <input type="number" id="studyHours" placeholder="e.g., 4" min="1">
+
+    <label>Mood:</label>
+    <select id="mood">
+      <option value="fresh">😊 Fresh</option>
+      <option value="tired">😴 Tired</option>
+      <option value="stressed">😵 Stressed</option>
+    </select>
+
+    <h3>Enter Subjects:</h3>
+    <div id="subjectsContainer">
+      <div class="subjectInput">
+        <input type="text" placeholder="Subject Name" class="subjectName">
+        <select class="subjectDifficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+    </div>
+    <button onclick="addSubject()">➕ Add More Subject</button>
+    <button onclick="generatePlan()">Generate Plan</button>
+
+    <div id="scheduleOutput"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
